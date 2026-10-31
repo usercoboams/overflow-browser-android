@@ -58,7 +58,7 @@ jobs:
 
       - name: Upload debug APK
         if: inputs.build_type == 'debug' || inputs.build_type == 'both'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: overflow-debug-${{ github.run_number }}
           path: app/build/outputs/apk/debug/*.apk
@@ -67,7 +67,7 @@ jobs:
 
       - name: Upload release APK
         if: inputs.build_type == 'release' || inputs.build_type == 'both'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: overflow-release-${{ github.run_number }}
           path: app/build/outputs/apk/release/*.apk
